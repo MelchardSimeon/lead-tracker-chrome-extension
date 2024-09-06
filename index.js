@@ -1,22 +1,22 @@
 
-let myLeads = ["www.awesomelead.com", "www.epiclead.com", "www.greatlead.comz"];
+let myLeads = [];
 let inputEl = document.getElementById("input-el")
-let inputButton = document.querySelector("#input-btn").addEventListener("click", saveInput)
+let inputButton = document.querySelector("#input-btn")
 let ul = document.getElementById("ul")
 
-console.log(inputValue)
+inputButton.addEventListener("click", saveInput)
 
 function saveInput() {
-    let inputValue = inputEl.value
-    myLeads.push(inputValue)
-    console.log(myLeads)
-    inputValue = ""
-
-    for (let i = 0; i < myLeads.length; i++) {
-        let li = document.createElement("li")
-        li.textContent += myLeads[i]    
-        ul.appendChild(li)
-    }
-    inputEl.value = ""  
+    myLeads.push(inputEl.value)
+    inputEl.value = ""
+    renderValue()
 }
 
+function renderValue() {
+    ul.innerHTML = ""
+    for (let i = 0; i < myLeads.length; i++) {
+        let li = document.createElement("li")
+        li.textContent = myLeads[i]
+        ul.appendChild(li)
+    }
+}       
