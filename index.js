@@ -5,6 +5,7 @@ let inputButton = document.querySelector("#input-btn")
 let ul = document.getElementById("ul")
 
 inputButton.addEventListener("click", saveInput)
+inputButton.addEventListener("enter", saveInput)
 
 function saveInput() {
     myLeads.push(inputEl.value)

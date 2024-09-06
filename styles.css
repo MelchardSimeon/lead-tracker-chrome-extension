@@ -27,3 +27,13 @@ body {
 #input-btn:hover {
     opacity: 0.7;
 }
+
+ul, a {
+    list-style: none;
+    text-decoration: underline;
+    color: #5f9341;
+}
+
+li {
+    margin: 10px 0;
+}
